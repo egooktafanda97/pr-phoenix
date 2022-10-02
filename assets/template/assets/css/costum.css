@@ -1,0 +1,13 @@
+.it-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 40px !important;
+	height: 40px !important;
+}
+
+.it-center i {
+	margin: 0 !important;
+}

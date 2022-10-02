@@ -13,53 +13,54 @@ import "ace-builds/src-noconflict/ext-language_tools";
 // ===========================================================
 
 export default function Action(props) {
-  const dispatch = useDispatch();
-  const getRedux = useSelector((state) => state);
-  const closeModal = () => {
-    dispatch({ type: "MODAL-ACTION", payload: "hide-mod" });
-  };
+	const dispatch = useDispatch();
+	const getRedux = useSelector((state) => state);
+	const closeModal = () => {
+		dispatch({ type: "MODAL-ACTION", payload: "hide-mod" });
+	};
 
-  const onChange = (ev) => {
-    dispatch({ type: "ACTION-VALUE", payload: ev });
-  };
-  return (
-    <div>
-      <div className={`modal-costumes ${getRedux.modalAttrAction}`}>
-        <div className='flex flex-row justify-between w-full items-center mb-3'>
-          <h5>Action Papper</h5>
-          <span
-            className='btn-closed'
-            onClick={() => {
-              $(".modal-costumes").addClass("hide-mod").removeClass("show-mod");
-              closeModal();
-            }}>
-            <FaTimes />
-          </span>
-        </div>
-        <hr />
-        <AceEditor
-          placeholder='Placeholder Text'
-          mode='json'
-          theme='monokai'
-          name='blah2'
-          // onLoad={this.onLoad}
-          onChange={onChange}
-          fontSize={14}
-          // showPrintMargin={true}
-          // showGutter={true}
-          // highlightActiveLine={true}
-          value={getRedux.ACTIONVALUE}
-          setOptions={{
-            enableBasicAutocompletion: true,
-            enableLiveAutocompletion: true,
-            enableSnippets: true,
-            showLineNumbers: true,
-            tabSize: 2,
-          }}
-          style={{ width: "100%", height: "75%", paddingBottom: "10ppx" }}
-        />
-        <hr />
-      </div>
-    </div>
-  );
+	const onChange = (ev) => {
+		dispatch({ type: "ACTION-VALUE", payload: ev });
+	};
+	return (
+		<div>
+			<div className={`modal-costumes ${getRedux.modalAttrAction}`}>
+				<div className="flex-center-between items-center mb-3">
+					<h5>Action Papper</h5>
+					<span
+						className="btn-closed"
+						onClick={() => {
+							$(".modal-costumes").addClass("hide-mod").removeClass("show-mod");
+							closeModal();
+						}}
+					>
+						<FaTimes />
+					</span>
+				</div>
+				<hr />
+				<AceEditor
+					placeholder="Placeholder Text"
+					mode="json"
+					theme="monokai"
+					name="blah2"
+					// onLoad={this.onLoad}
+					onChange={onChange}
+					fontSize={14}
+					// showPrintMargin={true}
+					// showGutter={true}
+					// highlightActiveLine={true}
+					value={getRedux.ACTIONVALUE}
+					setOptions={{
+						enableBasicAutocompletion: true,
+						enableLiveAutocompletion: true,
+						enableSnippets: true,
+						showLineNumbers: true,
+						tabSize: 2,
+					}}
+					style={{ width: "100%", height: "75%", paddingBottom: "10ppx" }}
+				/>
+				<hr />
+			</div>
+		</div>
+	);
 }

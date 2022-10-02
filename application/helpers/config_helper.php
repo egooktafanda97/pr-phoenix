@@ -1,7 +1,17 @@
 <?php
-function api_url()
+function gigades($get = null)
 {
-    return "https://bidangsampahdlhpelalawan.com/rest/";
+    switch ($get) {
+        case 'key':
+            return "959B82AED46F4D2854AB83C4FDA8F";
+            break;
+        case 'url':
+            return "http://v3.phoenixkreatifdigital.com/rest/api/";
+            break;
+        default:
+            return "http://v3.phoenixkreatifdigital.com/rest/api/";
+            break;
+    }
 }
 
 function auth()

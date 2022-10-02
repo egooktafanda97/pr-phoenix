@@ -456,7 +456,7 @@ function CurlPost($url, $data)
 		"Content-Type: application/json",
 	);
 	curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-	curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
 	//for debug only!
 	curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
 	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
