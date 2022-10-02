@@ -16,7 +16,7 @@ class Autentication extends CI_Controller
         $password = $this->input->post('password');
         $this->db->where('username', $username);
         $user = $this->db->get('users')->row_array();
-        if ($user) {
+        if (!empty($user)) {
             if (password_verify($password, $user['password'])) {
                 $data = [
                     'user' => $user,
