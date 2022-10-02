@@ -28,9 +28,9 @@ $db['default'] = array(
 $db['push'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'phoenixk_monitoring',
-	'password' => 'Ridhohawal1',
-	'database' => 'phoenixk_calonmitra',
+	'username' => 'phoenixk_pr_phoenix',
+	'password' => 'ot,ey+=y4?5n',
+	'database' => 'phoenixk_pr-phoenix',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
