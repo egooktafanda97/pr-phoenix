@@ -22,7 +22,7 @@
 					{ "label": "Nama Lengkap", "value": "nama_lengkap" },
 					{ "label": "Jenis Kelamin", "value": "jenis_klamin" },
 					{ "label": "Status Perkawinan", "value": "status_perkawinan" },
-					{ "label": "Tempat Lahir", "value": "sungai langsat" },
+					{ "label": "Tempat Lahir", "value": "tempat_lahir" },
 					{ "label": "Tanggal Lahir", "value": "tanggal_lahir" },
 					{ "label": "Agama", "value": "agama" },
 					{ "label": "Golongan Darah", "value": "gol_darah" },
